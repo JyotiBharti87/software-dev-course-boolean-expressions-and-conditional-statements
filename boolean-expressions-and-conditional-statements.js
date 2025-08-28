@@ -50,3 +50,29 @@ Add Customization and expand the game:
   - Use nested conditionals and logical operators to create complex outcomes.
 
 */
+
+const hasHelp = false;  // no help in mountains 
+const hasMagic = true; //wizard know magic
+
+console.log("Now that you've chosen your path: \nIn mountains you can pick:\tmagic Carpet \tor \tmagic Wand.\nIn village you can pick:\thorse \tor \twizard .");
+
+const choice2= readline.question("What did you pick?");
+
+if (choice2 === "magic carpet" && hasMagic) {
+  console.log("You fly to the castle.");
+} 
+else if (choice2 === "magic wand" && !hasMagic) {
+  console.log("You don't know spell to use the Magic Wand. Walk to castle.");
+} 
+else if (choice2 === "magic wand" && hasHelp) {
+  console.log("With help, you cast a spell and open a portal to the castle!");
+}
+else if (choice2 === "wizard" && hasMagic) {
+  console.log("You use your resources to go to the castle.");
+} 
+else if (choice2 === "horse" && NoMagic) {
+  console.log("Go to the Castle!");
+}
+else{
+  console.log("The princess is still waiting to be saved!");
+}
