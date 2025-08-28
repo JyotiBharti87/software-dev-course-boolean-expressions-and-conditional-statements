@@ -61,7 +61,7 @@ const choice2= readline.question("What did you pick?");
 if (choice2 === "magic carpet" && hasMagic) {
   console.log("You fly to the castle.");
 } 
-else if (choice2 === "magic wand" && !hasMagic) {
+else if (choice2 === "magic wand" || !hasMagic) {
   console.log("You don't know spell to use the Magic Wand. Walk to castle.");
 } 
 else if (choice2 === "magic wand" && hasHelp) {
@@ -70,7 +70,7 @@ else if (choice2 === "magic wand" && hasHelp) {
 else if (choice2 === "wizard" && hasMagic) {
   console.log("You use your resources to go to the castle.");
 } 
-else if (choice2 === "horse" && NoMagic) {
+else if (choice2 === "horse" && hasMagic) {
   console.log("Go to the Castle!");
 }
 else{
